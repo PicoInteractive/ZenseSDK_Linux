@@ -1,0 +1,48 @@
+﻿V2.4.0.4
+1. Add MJPEG decoder
+2. Optimize filter effect
+3. Optimize CPU loading
+
+V2.3.8.5
+1. Fix RGB image stretching issue in 640*480
+2. Fix image flicker issue in mapping depth2rgb
+3. Fix RGB/IR undistortion zigzag border problem
+
+V2.3.7.7
+1. Optimize data parsing
+2. Add protection if the camera's internal parameters are empty
+3. In WDR mode,do not change the filter's max/min threshold,when change RGB resolution 
+4. Add header files PicoZense_define.h, PicoZense_enums.h, PicoZense_types.h. Change some api/enum/struct name in header files.
+    API:
+       PsSetDepthDistortionEnabled --> PsSetDepthDistortionCorrectionEnabled
+       PsSetRGBDistortionEnabled --> PsSetRGBDistortionCorrectionEnabled
+       PsSetIrDistortionEnabled --> PsSetIrDistortionCorrectionEnabled
+       PsSetWDRMode --> PsSetWDROutputMode
+       PsGetWDRMode --> PsGetWDROutputMode
+       PsSetWDRThreshold --> PsSetWDRFusionThreshold
+	   
+       Add api PsSetDataMode
+	
+    Enum:
+       PsTotalRange --> PsWDRTotalRange
+       PsFrameType     
+          PsDepthRGBFrame --> PsMappedRGBFrame
+          PsRGBDepthFrame --> PsMappedDepthFrame
+          PsRGBIRFrame --> PsMappedIRFrame
+          PsWDRFrame --> PsWDRDepthFrame
+       PsDataMode
+          PsDepth_30 --> PsDepthAndRGB_30
+          PsIR_30 --> PsIRAndRGB_30
+          PsDepthAndIRAndRGB --> PsDepthAndIRAndRGB_30
+          PsDepthAndIR_15 --> PsDepthAndIR_15_RGB_30
+          PsMultiRange_IR --> PsWDR_IR
+          PsMultiRange_DepthAnfIR --> PsWDR_DepthAndIR
+       PsWDRStyle
+          PsWDR_MERGE --> PsWDR_FUSION
+          PsWDR_EXPLICIT --> PsWDR_ALTERNATION
+		  
+    Struct:
+       PsWDRMode --> PsWDROutputMode
+       PsCameraExtrinsicParameters   
+          transfer --> translation
+
