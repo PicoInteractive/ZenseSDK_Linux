@@ -1,4 +1,5 @@
 # ZenseSDK_Linux
+**For Ubuntu 18.04**
 
 This is the Linux SDK for the Pico Zense TOF RGBD Camera (DCAM710), for the Ubuntu 18.04 distribution. 
 
@@ -6,7 +7,7 @@ The DCAM710 is a standalone 3D camera hardware module, developed by Pico Interac
 
 More information about Pico Zense cameras is available at: https://www.picozense.com/
 
-The Linux SDK is build and tested on Ubuntu Linux. Each SDK is functionally the same but linked against appropriate system libraries. Versions for particular Ubuntu LTS distributions are in their own branch:
+The Linux SDK is built and tested on Ubuntu Linux. Each SDK is functionally the same but linked against appropriate system libraries. Versions for particular Ubuntu LTS distributions are in their own branch:
 
 - [Ubuntu 18.04](https://github.com/PicoInteractive/ZenseSDK_Linux/tree/Ubuntu18.04)
 - [Ubuntu 16.04](https://github.com/PicoInteractive/ZenseSDK_Linux/tree/Ubuntu16.04)
