@@ -1,5 +1,5 @@
 # ZenseSDK_Linux
-**For Ubuntu 18.04**
+**For Ubuntu 18.04.**
 
 This is the Linux SDK for the Pico Zense TOF RGBD Camera (DCAM710), for the Ubuntu 18.04 distribution. 
 
